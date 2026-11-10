@@ -8,10 +8,10 @@ Open `index.html` in a web browser. No build tools or dependencies are required.
 
 ## Pages
 
-- `index.html` — Home, mission, impact, featured animals, and ways to help
-- `services.html` — Adoption, fostering, and volunteering
-- `about.html` — About the rescue
-- `contact.html` — Contact and getting involved
+- `index.html` - Home, mission, impact, featured animals, and ways to help
+- `services.html` - Adoption, fostering, and volunteering
+- `about.html` - About the rescue
+- `contact.html` - Contact and getting involved
 
 ## Assets
 
