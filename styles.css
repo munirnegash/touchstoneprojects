@@ -1,0 +1,257 @@
+/* Second Chance Animal Rescue: Touchstone 3 styles
+   Palette: deep teal (#1F5F5B), warm amber (#F2A541), off-white (#FFFDF8), charcoal text (#222222)
+   Fonts: Georgia (headings), Trebuchet MS (body) */
+
+/* Base styles (mobile first) */
+:root {
+  --teal: #1F5F5B;
+  --amber: #F2A541;
+  --cream: #FFFDF8;
+  --text: #222222;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--cream);
+}
+
+h1, h2, h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--teal);
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-top: 0;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+section {
+  padding: 1.5rem 1.25rem;
+  border-bottom: 1px solid #e3ddd0;
+}
+
+p, li {
+  max-width: 70ch;
+}
+
+a {
+  color: var(--teal);
+  text-decoration-thickness: 2px;
+}
+
+a:hover,
+a:focus {
+  color: #14403d;
+}
+
+/* Header and navigation */
+header {
+  background-color: var(--teal);
+  color: #ffffff;
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+header h1 {
+  color: #ffffff;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+header nav a {
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+header nav a:hover,
+header nav a:focus {
+  text-decoration: underline;
+}
+
+header nav a[aria-current="page"] {
+  color: var(--amber);
+  text-decoration: underline;
+}
+
+/* Images and media */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+figure {
+  margin: 0;
+}
+
+figcaption {
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+/* Lists used as "How you can help" and values */
+section ul {
+  padding-left: 1.25rem;
+}
+
+/* Form */
+form fieldset {
+  border: 1px solid #c9c1ae;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 0 0 1.25rem 0;
+  background-color: #ffffff;
+}
+
+legend {
+  font-family: Georgia, serif;
+  font-weight: bold;
+  color: var(--teal);
+  padding: 0 0.5rem;
+}
+
+form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+form input[type="text"],
+form input[type="email"],
+form select,
+form textarea {
+  width: 100%;
+  padding: 0.6rem;
+  font: inherit;
+  border: 2px solid #8c8577;
+  border-radius: 6px;
+  background-color: #ffffff;
+}
+
+form input[type="radio"] {
+  margin-right: 0.4rem;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus,
+button:focus {
+  outline: 3px solid var(--amber);
+  outline-offset: 2px;
+}
+
+button {
+  font: inherit;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--amber);
+  color: var(--text);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e0912c;
+}
+
+/* Footer */
+footer {
+  background-color: #17403d;
+  color: #ffffff;
+  padding: 1rem 1.25rem;
+  font-size: 0.95rem;
+}
+
+footer p {
+  margin: 0.25rem 0;
+}
+
+footer a {
+  color: var(--amber);
+}
+
+/* Larger screens (tablet and desktop) */
+@media (min-width: 800px) {
+  body {
+    font-size: 1.1rem;
+  }
+
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2.5rem;
+  }
+
+  header nav ul {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+
+  section {
+    padding: 2rem 2.5rem;
+  }
+
+  /* Show the "How You Can Help" items and the featured image side by side */
+  #how-you-can-help ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  #how-you-can-help li {
+    flex: 1 1 220px;
+    background-color: #ffffff;
+    border-left: 5px solid var(--amber);
+    padding: 0.75rem 1rem;
+  }
+
+  #spotlight figure {
+    max-width: 420px;
+  }
+
+  #adoption img,
+  #volunteer img {
+    max-width: 320px;
+  }
+
+  #video-message video {
+    max-width: 640px;
+  }
+
+  form {
+    max-width: 640px;
+  }
+}
