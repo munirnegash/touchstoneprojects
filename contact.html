@@ -23,16 +23,21 @@
     <section id="interest-form">
       <h2>Volunteer or Foster Interest Form</h2>
       <p>Tell us how you would like to help. A member of our team will reply within three business days.</p>
-      <form action="#" method="post">
+      <p id="saved-note" aria-live="polite"></p>
+      <p id="saved-roles" aria-live="polite"></p>
+
+      <form id="interest-form-element" action="#" method="post" novalidate>
         <fieldset>
           <legend>Your Details</legend>
           <p>
             <label for="full-name">Full name (required)</label><br>
-            <input type="text" id="full-name" name="full_name" required minlength="2" autocomplete="name">
+            <input type="text" id="full-name" name="full_name" required minlength="2" autocomplete="name" aria-describedby="full-name-error">
+            <span class="error-message" id="full-name-error"></span>
           </p>
           <p>
             <label for="email">Email address (required)</label><br>
-            <input type="email" id="email" name="email" required autocomplete="email">
+            <input type="email" id="email" name="email" required autocomplete="email" aria-describedby="email-error">
+            <span class="error-message" id="email-error"></span>
           </p>
         </fieldset>
 
@@ -40,26 +45,28 @@
           <legend>Your Interest</legend>
           <p>
             <label for="interest-type">Interest type (required)</label><br>
-            <select id="interest-type" name="interest_type" required>
+            <select id="interest-type" name="interest_type" required aria-describedby="interest-type-error">
               <option value="">Choose one</option>
               <option value="volunteer">Volunteer</option>
               <option value="foster">Foster</option>
               <option value="adoption">Adoption information</option>
             </select>
+            <span class="error-message" id="interest-type-error"></span>
           </p>
           <p>
             <label for="availability">Availability (required)</label><br>
-            <select id="availability" name="availability" required>
+            <select id="availability" name="availability" required aria-describedby="availability-error">
               <option value="">Choose one</option>
               <option value="weekdays">Weekdays</option>
               <option value="weekends">Weekends</option>
               <option value="evenings">Evenings</option>
               <option value="flexible">Flexible</option>
             </select>
+            <span class="error-message" id="availability-error"></span>
           </p>
         </fieldset>
 
-        <fieldset>
+        <fieldset aria-describedby="pet-experience-error">
           <legend>Experience with Pets (required)</legend>
           <p>
             <input type="radio" id="exp-none" name="pet_experience" value="none" required>
@@ -69,18 +76,21 @@
             <input type="radio" id="exp-experienced" name="pet_experience" value="experienced">
             <label for="exp-experienced">Experienced with several animals</label>
           </p>
+          <span class="error-message" id="pet-experience-error"></span>
         </fieldset>
 
         <fieldset>
           <legend>Your Message</legend>
           <p>
             <label for="message">Short message (required, up to 500 characters)</label><br>
-            <textarea id="message" name="message" rows="5" cols="50" required maxlength="500"></textarea>
+            <textarea id="message" name="message" rows="5" cols="50" required maxlength="500" aria-describedby="message-error"></textarea>
+            <span class="error-message" id="message-error"></span>
           </p>
         </fieldset>
 
         <p><button type="submit">Send My Interest</button></p>
       </form>
+      <p id="form-success" class="success-message" aria-live="polite"></p>
     </section>
 
     <section id="service-area">
@@ -102,5 +112,7 @@
     <p>Second Chance Animal Rescue. Email <a href="contact.html">our team</a> with questions.</p>
     <p>&copy; 2026 Second Chance Animal Rescue. All rights reserved.</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

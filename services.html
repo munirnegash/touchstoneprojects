@@ -39,6 +39,7 @@
     <section id="volunteer">
       <h2>Volunteer Roles</h2>
       <img src="images/rescue-volunteer_c.png" alt="A young man in a white Volunteer t-shirt kneels beside a golden-brown dog and gently holds one of its paws.">
+
       <h3>Shelter Care Assistant</h3>
       <p>Feed, walk, and groom animals, and help keep kennels clean and safe. Shifts are about three hours.</p>
       <h3>Adoption Event Helper</h3>
@@ -48,11 +49,43 @@
       <h3>Administrative Volunteer</h3>
       <p>Support intake, update adoption records, and help with social media and newsletters.</p>
     </section>
+
+    <section id="role-tracker">
+      <h2>Choose the Roles That Interest You</h2>
+      <p>Select one or more roles and save your choices. Your selection stays saved on this device, and it will appear on the contact page.</p>
+      <fieldset class="role-tracker">
+        <legend>Volunteer Roles</legend>
+        <ul>
+          <li>
+            <input type="checkbox" id="role-shelter-care" name="roles" value="shelter-care">
+            <label for="role-shelter-care">Shelter Care Assistant</label>
+          </li>
+          <li>
+            <input type="checkbox" id="role-event-helper" name="roles" value="event-helper">
+            <label for="role-event-helper">Adoption Event Helper</label>
+          </li>
+          <li>
+            <input type="checkbox" id="role-transport" name="roles" value="transport">
+            <label for="role-transport">Transport Driver</label>
+          </li>
+          <li>
+            <input type="checkbox" id="role-admin" name="roles" value="admin">
+            <label for="role-admin">Administrative Volunteer</label>
+          </li>
+        </ul>
+      </fieldset>
+      <p><button type="button" id="save-roles">Save My Selection</button></p>
+      <p id="role-status" aria-live="polite"></p>
+      <h3>Your Saved Roles</h3>
+      <div id="role-summary" aria-live="polite"></div>
+    </section>
   </main>
 
   <footer>
     <p>Second Chance Animal Rescue. Email <a href="contact.html">our team</a> with questions.</p>
     <p>&copy; 2026 Second Chance Animal Rescue. All rights reserved.</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

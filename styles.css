@@ -255,3 +255,34 @@ footer a {
     max-width: 640px;
   }
 }
+
+/* Touchstone 4: validation, feedback, and role tracker */
+.error-message {
+  display: block;
+  color: #9b1c1c;
+  font-weight: bold;
+  margin-top: 0.25rem;
+}
+
+form input[aria-invalid="true"],
+form select[aria-invalid="true"],
+form textarea[aria-invalid="true"] {
+  border-color: #9b1c1c;
+}
+
+.success-message {
+  color: var(--teal);
+  font-weight: bold;
+}
+
+.role-tracker {
+  border: 1px solid #c9c1ae;
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: #ffffff;
+}
+
+.role-tracker ul {
+  list-style: none;
+  padding: 0;
+}
