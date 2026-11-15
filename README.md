@@ -17,22 +17,27 @@ A community animal rescue website built across the Introduction to Web Developme
 ## Project Structure
 
 ```
-site/
+touchstone2/                (repository root)
 ├── index.html
 ├── services.html
 ├── about.html
 ├── contact.html
 ├── styles.css
 ├── script.js
+├── .gitignore
+├── README.md
 ├── images/
 │   ├── rescue-feature-large_c.png
 │   ├── rescue-feature-small_c.png
+│   ├── rescue-logo_c.png
 │   ├── rescue-pet-spotlight_c.png
 │   ├── rescue-pet_c.png
 │   └── rescue-volunteer_c.png
 └── media/
     └── rescue-message_c.mp4
 ```
+
+All site files sit at the repository root. The site is published from the `gh-pages` branch, which mirrors this root layout, so no `site/` subfolder is used.
 
 ---
 
@@ -48,9 +53,9 @@ Added JavaScript to the existing site.
 
 **Files changed**
 
-- `site/script.js` (new)
-- `site/services.html`, `site/contact.html` (tracker, validation markup, script link)
-- `site/styles.css` (error, success, and tracker styles)
+- `script.js` (new)
+- `services.html`, `contact.html` (tracker, validation markup, script link)
+- `styles.css` (error, success, and tracker styles)
 
 **How the JavaScript is organized**
 
@@ -92,7 +97,7 @@ Added CSS to the Touchstone 2 site.
 
 **Files changed**
 
-- `site/styles.css` (new)
+- `styles.css` (new)
 - All four HTML pages link to `styles.css`.
 
 ---
@@ -112,16 +117,16 @@ Built the four-page HTML structure for the client.
 
 **Files**
 
-- `site/index.html`, `services.html`, `about.html`, `contact.html`
-- `site/images/` and `site/media/` (the media folder holds the video, which is not included in the repository)
+- `index.html`, `services.html`, `about.html`, `contact.html`
+- `images/` and `media/` (the media folder holds the video, which is not included in the repository)
 
-**Note on the video:** the MP4 is about 100 MB, which GitHub rejects. It must be added to `site/media/` locally before testing, and it is excluded from the repository.
+**Note on the video:** the MP4 is about 100 MB, which GitHub rejects. It must be added to `media/` locally before testing, and it is excluded from the repository by `.gitignore` (`media/*.mp4`).
 
 ---
 
 ## Running the Site Locally
 
-1. Open the `site/` folder in GitHub Codespaces, VS Code, or another editor.
+1. Open the repository root in GitHub Codespaces, VS Code, or another editor.
 2. Open `index.html` in a browser, or use Live Server.
 3. Use the navigation to move between pages.
 
